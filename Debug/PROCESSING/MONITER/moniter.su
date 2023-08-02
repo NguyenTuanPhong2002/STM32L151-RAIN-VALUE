@@ -1,0 +1,7 @@
+../PROCESSING/MONITER/moniter.c:7:6:setup_moniter	24	static
+../PROCESSING/MONITER/moniter.c:26:6:moniter_begin	16	static
+../PROCESSING/MONITER/moniter.c:43:6:home_moniter	24	static
+../PROCESSING/MONITER/moniter.c:86:6:count_moniter	24	static
+../PROCESSING/MONITER/moniter.c:113:6:finish_moniter	128	static
+../PROCESSING/MONITER/moniter.c:172:6:deviceInformatio	24	static
+../PROCESSING/MONITER/moniter.c:191:6:dataConfigure	128	static

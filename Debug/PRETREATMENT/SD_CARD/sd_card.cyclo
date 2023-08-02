@@ -1,0 +1,9 @@
+sd_card.c:24:5:bufsize	2
+sd_card.c:32:6:clear_buffer	2
+sd_card.c:38:9:sd_mount	2
+sd_card.c:49:6:sd_check_space	1
+sd_card.c:63:9:SD_creat_file	2
+sd_card.c:74:6:SD_readData	1
+sd_card.c:83:9:SD_removeFile	2
+sd_card.c:92:9:SD_putData	2
+sd_card.c:106:9:SD_sendData	1

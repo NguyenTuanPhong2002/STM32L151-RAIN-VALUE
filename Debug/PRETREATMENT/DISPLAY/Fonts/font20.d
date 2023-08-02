@@ -1,0 +1,4 @@
+PRETREATMENT/DISPLAY/Fonts/font20.o: \
+ ../PRETREATMENT/DISPLAY/Fonts/font20.c \
+ ../PRETREATMENT/DISPLAY/Fonts/fonts.h
+../PRETREATMENT/DISPLAY/Fonts/fonts.h:

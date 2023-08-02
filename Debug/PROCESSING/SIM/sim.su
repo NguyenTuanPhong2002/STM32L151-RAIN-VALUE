@@ -1,0 +1,5 @@
+../PROCESSING/SIM/sim.c:8:5:startSIM	8	static
+../PROCESSING/SIM/sim.c:19:5:simInit	16	static
+../PROCESSING/SIM/sim.c:32:6:getDateTime	64	static
+../PROCESSING/SIM/sim.c:55:6:getRealTime	64	static
+../PROCESSING/SIM/sim.c:81:5:sendDataFirebase	16	static

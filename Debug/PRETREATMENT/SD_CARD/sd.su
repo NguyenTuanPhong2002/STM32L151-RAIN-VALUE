@@ -1,0 +1,9 @@
+../PRETREATMENT/SD_CARD/sd.c:24:5:bufsize	24	static
+../PRETREATMENT/SD_CARD/sd.c:32:6:clear_buffer	16	static
+../PRETREATMENT/SD_CARD/sd.c:38:9:sd_mount	16	static
+../PRETREATMENT/SD_CARD/sd.c:49:6:sd_check_space	8	static
+../PRETREATMENT/SD_CARD/sd.c:63:9:SD_creat_file	24	static
+../PRETREATMENT/SD_CARD/sd.c:74:6:SD_readData	16	static
+../PRETREATMENT/SD_CARD/sd.c:83:9:SD_removeFile	24	static
+../PRETREATMENT/SD_CARD/sd.c:92:9:SD_putData	24	static
+../PRETREATMENT/SD_CARD/sd.c:106:9:SD_sendData	24	static

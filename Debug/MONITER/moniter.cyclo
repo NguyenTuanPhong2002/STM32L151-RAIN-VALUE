@@ -1,0 +1,3 @@
+moniter.c:6:6:setup_moniter	3
+moniter.c:24:6:moniter_begin	1
+moniter.c:35:6:home_moniter	1

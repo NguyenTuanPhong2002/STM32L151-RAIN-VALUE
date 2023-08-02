@@ -1,0 +1,2 @@
+../CONTROLLER/src/getdata.c:8:6:deviceInit	8	static
+../CONTROLLER/src/getdata.c:13:6:dataCounter	16	static

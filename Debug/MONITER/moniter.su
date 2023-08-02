@@ -1,0 +1,3 @@
+../MONITER/moniter.c:6:6:setup_moniter	24	static
+../MONITER/moniter.c:24:6:moniter_begin	8	static
+../MONITER/moniter.c:35:6:home_moniter	16	static

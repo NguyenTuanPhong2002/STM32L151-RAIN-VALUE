@@ -1,0 +1,6 @@
+../PROCESSING/DATA/data.c:30:6:initCounter	4	static
+../PROCESSING/DATA/data.c:34:6:dataInit	4	static
+../PROCESSING/DATA/data.c:50:12:evenMode	16	static
+../PROCESSING/DATA/data.c:63:12:countTime	16	static
+../PROCESSING/DATA/data.c:76:13:dataGetTime	48	static
+../PROCESSING/DATA/data.c:124:6:handleData	24	static

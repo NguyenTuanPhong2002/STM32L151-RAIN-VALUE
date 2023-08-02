@@ -1,0 +1,5 @@
+sim.c:8:5:startSIM	1
+sim.c:19:5:simInit	2
+sim.c:32:6:getDateTime	1
+sim.c:55:6:getRealTime	1
+sim.c:81:5:sendDataFirebase	2

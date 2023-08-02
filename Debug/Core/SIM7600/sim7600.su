@@ -1,0 +1,8 @@
+../Core/SIM7600/sim7600.c:17:6:SIM7600_init	16	static
+../Core/SIM7600/sim7600.c:41:19:sendATcommand	32	static
+../Core/SIM7600/sim7600.c:91:19:SIM7600_Start	24	static
+../Core/SIM7600/sim7600.c:106:19:SIM7600_httpStart	24	static
+../Core/SIM7600/sim7600.c:123:19:SIM7600_httpStop	24	static
+../Core/SIM7600/sim7600.c:138:19:SIM7600_httpRead	224	static
+../Core/SIM7600/sim7600.c:166:19:SIM7600_setUrl	128	static
+../Core/SIM7600/sim7600.c:186:19:SIM7600_httpPost	56	static

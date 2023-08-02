@@ -1,0 +1,12 @@
+configure.c:19:6:DEV_SPI_WriteByte	1
+configure.c:29:5:DEV_Module_Init	1
+configure.c:39:6:DEV_Module_Exit	1
+configure.c:54:6:DISPLAY_SendData	1
+configure.c:70:6:DISPLAY_SendCommand	1
+configure.c:83:6:DISPLAY_ReadBusy	1
+configure.c:98:6:DISPLAY_TurnOnDisplay	1
+configure.c:108:6:DISPLAY_Clear	5
+configure.c:146:6:DISPLAY_Display	5
+configure.c:177:6:DISPLAY_Sleep	1
+configure.c:187:6:DISPLAY_Init	1
+configure.c:210:6:DISPLAY_Reset	1

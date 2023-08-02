@@ -1,0 +1,9 @@
+sim7600.c:17:6:SIM7600_init	1
+sim7600.c:40:19:sendATcommand	6
+sim7600.c:91:19:SIM7600_Start	6
+sim7600.c:113:19:SIM7600_httpStart	1
+sim7600.c:130:19:SIM7600_httpStop	1
+sim7600.c:145:19:SIM7600_httpRead	5
+sim7600.c:173:19:SIM7600_setUrl	2
+sim7600.c:193:19:SIM7600_httpPost	3
+sim7600.c:226:19:SIM7600_getTime	3

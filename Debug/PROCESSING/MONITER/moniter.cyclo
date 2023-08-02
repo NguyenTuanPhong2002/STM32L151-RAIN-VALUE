@@ -1,0 +1,7 @@
+moniter.c:7:6:setup_moniter	3
+moniter.c:26:6:moniter_begin	1
+moniter.c:43:6:home_moniter	3
+moniter.c:86:6:count_moniter	1
+moniter.c:113:6:finish_moniter	3
+moniter.c:172:6:deviceInformatio	1
+moniter.c:191:6:dataConfigure	1
