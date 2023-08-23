@@ -29,29 +29,7 @@ PROCESSING/DATA/data.o: ../PROCESSING/DATA/data.c \
  ../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_tim.h \
  ../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_tim_ex.h \
  ../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_uart.h \
- ../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_exti.h \
- g:\stm32l151\ rain\ value\processing\moniter\moniter.h \
- g:\stm32l151\ rain\ value\pretreatment\display\configure.h \
- g:\stm32l151\ rain\ value\pretreatment\display\display.h \
- g:\stm32l151\ rain\ value\pretreatment\display\display.h \
- g:\stm32l151\ rain\ value\pretreatment\display\fonts\fonts.h \
- g:\stm32l151\ rain\ value\pretreatment\display\gui_paint.h \
- g:\stm32l151\ rain\ value\pretreatment\display\configure.h \
- g:\stm32l151\ rain\ value\pretreatment\display\Fonts/fonts.h \
- g:\stm32l151\ rain\ value\pretreatment\display\Debug.h \
- g:\stm32l151\ rain\ value\processing\sim\sim.h \
- g:\stm32l151\ rain\ value\pretreatment\sim7600\sim7600.h \
- g:\stm32l151\ rain\ value\processing\sd\sd.h ../FATFS/App/fatfs.h \
- ../Middlewares/Third_Party/FatFs/src/ff.h \
- ../Middlewares/Third_Party/FatFs/src/integer.h ../FATFS/Target/ffconf.h \
- ../Middlewares/Third_Party/FatFs/src/ff_gen_drv.h \
- ../Middlewares/Third_Party/FatFs/src/diskio.h \
- ../Middlewares/Third_Party/FatFs/src/ff.h ../FATFS/Target/user_diskio.h \
- g:\stm32l151\ rain\ value\pretreatment\sd_card\sd_card.h \
- g:\stm32l151\ rain\ value\pretreatment\sd_card\fatfs_sd.h \
- g:\stm32l151\ rain\ value\processing\data\data.h \
- g:\stm32l151\ rain\ value\controller\inc\getdata.h \
- g:\stm32l151\ rain\ value\processing\data\data.h
+ ../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_exti.h
 ../PROCESSING/DATA/data.h:
 ../Core/Inc/main.h:
 ../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal.h:
@@ -84,28 +62,3 @@ PROCESSING/DATA/data.o: ../PROCESSING/DATA/data.c \
 ../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_tim_ex.h:
 ../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_uart.h:
 ../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_exti.h:
-g:\stm32l151\ rain\ value\processing\moniter\moniter.h:
-g:\stm32l151\ rain\ value\pretreatment\display\configure.h:
-g:\stm32l151\ rain\ value\pretreatment\display\display.h:
-g:\stm32l151\ rain\ value\pretreatment\display\display.h:
-g:\stm32l151\ rain\ value\pretreatment\display\fonts\fonts.h:
-g:\stm32l151\ rain\ value\pretreatment\display\gui_paint.h:
-g:\stm32l151\ rain\ value\pretreatment\display\configure.h:
-g:\stm32l151\ rain\ value\pretreatment\display\Fonts/fonts.h:
-g:\stm32l151\ rain\ value\pretreatment\display\Debug.h:
-g:\stm32l151\ rain\ value\processing\sim\sim.h:
-g:\stm32l151\ rain\ value\pretreatment\sim7600\sim7600.h:
-g:\stm32l151\ rain\ value\processing\sd\sd.h:
-../FATFS/App/fatfs.h:
-../Middlewares/Third_Party/FatFs/src/ff.h:
-../Middlewares/Third_Party/FatFs/src/integer.h:
-../FATFS/Target/ffconf.h:
-../Middlewares/Third_Party/FatFs/src/ff_gen_drv.h:
-../Middlewares/Third_Party/FatFs/src/diskio.h:
-../Middlewares/Third_Party/FatFs/src/ff.h:
-../FATFS/Target/user_diskio.h:
-g:\stm32l151\ rain\ value\pretreatment\sd_card\sd_card.h:
-g:\stm32l151\ rain\ value\pretreatment\sd_card\fatfs_sd.h:
-g:\stm32l151\ rain\ value\processing\data\data.h:
-g:\stm32l151\ rain\ value\controller\inc\getdata.h:
-g:\stm32l151\ rain\ value\processing\data\data.h:

@@ -11,12 +11,10 @@ RM := rm -rf
 -include sources.mk
 -include PROCESSING/SIM/subdir.mk
 -include PROCESSING/SD/subdir.mk
--include PROCESSING/MONITER/subdir.mk
 -include PROCESSING/DATA/subdir.mk
 -include PRETREATMENT/SIM7600/subdir.mk
 -include PRETREATMENT/SD_CARD/subdir.mk
--include PRETREATMENT/DISPLAY/Fonts/subdir.mk
--include PRETREATMENT/DISPLAY/subdir.mk
+-include PRETREATMENT/HELTEC/subdir.mk
 -include Middlewares/Third_Party/FatFs/src/option/subdir.mk
 -include Middlewares/Third_Party/FatFs/src/subdir.mk
 -include FATFS/Target/subdir.mk

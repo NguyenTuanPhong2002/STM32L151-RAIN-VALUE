@@ -43,20 +43,7 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  g:\stm32l151\ rain\ value\processing\data\data.h \
  g:\stm32l151\ rain\ value\processing\sd\sd.h \
  g:\stm32l151\ rain\ value\pretreatment\sd_card\sd_card.h \
- g:\stm32l151\ rain\ value\pretreatment\sd_card\fatfs_sd.h \
- g:\stm32l151\ rain\ value\processing\moniter\moniter.h \
- g:\stm32l151\ rain\ value\pretreatment\display\configure.h \
- g:\stm32l151\ rain\ value\pretreatment\display\display.h \
- g:\stm32l151\ rain\ value\pretreatment\display\display.h \
- g:\stm32l151\ rain\ value\pretreatment\display\fonts\fonts.h \
- g:\stm32l151\ rain\ value\pretreatment\display\gui_paint.h \
- g:\stm32l151\ rain\ value\pretreatment\display\configure.h \
- g:\stm32l151\ rain\ value\pretreatment\display\Fonts/fonts.h \
- g:\stm32l151\ rain\ value\pretreatment\display\Debug.h \
- g:\stm32l151\ rain\ value\processing\sim\sim.h \
- g:\stm32l151\ rain\ value\processing\sd\sd.h \
- g:\stm32l151\ rain\ value\processing\data\data.h \
- g:\stm32l151\ rain\ value\controller\inc\getdata.h
+ g:\stm32l151\ rain\ value\pretreatment\sd_card\fatfs_sd.h
 ../Core/Inc/main.h:
 ../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal.h:
 ../Core/Inc/stm32l1xx_hal_conf.h:
@@ -106,16 +93,3 @@ g:\stm32l151\ rain\ value\processing\data\data.h:
 g:\stm32l151\ rain\ value\processing\sd\sd.h:
 g:\stm32l151\ rain\ value\pretreatment\sd_card\sd_card.h:
 g:\stm32l151\ rain\ value\pretreatment\sd_card\fatfs_sd.h:
-g:\stm32l151\ rain\ value\processing\moniter\moniter.h:
-g:\stm32l151\ rain\ value\pretreatment\display\configure.h:
-g:\stm32l151\ rain\ value\pretreatment\display\display.h:
-g:\stm32l151\ rain\ value\pretreatment\display\display.h:
-g:\stm32l151\ rain\ value\pretreatment\display\fonts\fonts.h:
-g:\stm32l151\ rain\ value\pretreatment\display\gui_paint.h:
-g:\stm32l151\ rain\ value\pretreatment\display\configure.h:
-g:\stm32l151\ rain\ value\pretreatment\display\Fonts/fonts.h:
-g:\stm32l151\ rain\ value\pretreatment\display\Debug.h:
-g:\stm32l151\ rain\ value\processing\sim\sim.h:
-g:\stm32l151\ rain\ value\processing\sd\sd.h:
-g:\stm32l151\ rain\ value\processing\data\data.h:
-g:\stm32l151\ rain\ value\controller\inc\getdata.h:

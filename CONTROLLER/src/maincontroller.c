@@ -85,37 +85,32 @@ void maincontroller()
     {
         ButtionOn = 0;
         flagButtion = 0;
-        deviceInformatio(&device);
     }
     if (ButtionOn == 3 && flagButtion == 1)
     {
         ButtionOn = 0;
         data.Distance_high = data.Distance_high + 0.5;
-        dataConfigure(&data);
+
     }
     if (ButtionOn == 4 && flagButtion == 1)
     {
         flagButtion = 1;
         ButtionOn = 0;
         data.Distance_high = data.Distance_high - 0.5;
-        dataConfigure(&data);
     }
     if (ButtionOn == 5)
     {
         ButtionOn = 0;
         flagButtion = 1;
-        dataConfigure(&data);
     }
     if (ButtionOn == 6 && flagButtion == 1)
     {
         ButtionOn = 0;
         data.Distance = data.Distance + 0.5;
-        dataConfigure(&data);
     }
     if (ButtionOn == 7 && flagButtion == 1)
     {
         ButtionOn = 0;
         data.Distance = data.Distance - 0.5;
-        dataConfigure(&data);
     }
 }
