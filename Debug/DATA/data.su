@@ -1,0 +1,4 @@
+../DATA/data.c:29:6:dataInit	16	static
+../DATA/data.c:45:12:evenMode	16	static
+../DATA/data.c:58:12:countTime	16	static
+../DATA/data.c:70:6:dataGetTime	40	static

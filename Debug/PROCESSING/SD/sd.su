@@ -1,0 +1,2 @@
+../PROCESSING/SD/sd.c:5:16:SD_Init	16	static
+../PROCESSING/SD/sd.c:19:16:SD_CreatFile	128	static

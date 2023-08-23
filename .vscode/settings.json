@@ -1,0 +1,11 @@
+{
+    "stm32-for-vscode.openOCDPath": false,
+    "stm32-for-vscode.armToolchainPath": false,
+    "files.associations": {
+        "fatfs.h": "c",
+        "fatfs_sd.h": "c",
+        "configure.h": "c",
+        "sd.h": "c",
+        "main.h": "c"
+    }
+}

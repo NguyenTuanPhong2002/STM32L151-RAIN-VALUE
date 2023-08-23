@@ -1,0 +1,4 @@
+data.c:29:6:dataInit	1
+data.c:45:12:evenMode	1
+data.c:58:12:countTime	1
+data.c:70:6:dataGetTime	6
