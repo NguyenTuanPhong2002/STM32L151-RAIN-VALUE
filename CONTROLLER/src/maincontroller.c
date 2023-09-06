@@ -1,5 +1,13 @@
 #include "../inc/maincontroller.h"
 #include <stdio.h>
+#include "../../PROCESSING/DISPLAY/display.h"
+
+// #include "../../PRETREATMENT/epaper/epaper.h"
+// #include "../../PRETREATMENT/epaper/DEV_Config.h"
+// #include "../../PRETREATMENT/HELTEC/heltec.h"
+// #include "../../PRETREATMENT/HELTEC/IMAGE_290_BW.h"
+// #include "../../PRETREATMENT/epaper/Fonts/fonts.h"
+// #include "../../PRETREATMENT/epaper/GUI/GUI_Paint.h"
 
 extern uint32_t ButtionOn;
 extern REALTIME realtimedata;
@@ -14,8 +22,11 @@ uint8_t flagButtion = 0;
 
 void start()
 {
-    //setup_moniter();
-    //moniter_begin();
+    displayInit();
+    HAL_Delay(300);
+    
+    logoDisplay();
+
     deviceInit();
     dataInit();
     startSIM();
@@ -23,7 +34,10 @@ void start()
     simStatus = simInit();
     sdStatus = SD_Init();
     initCounter(&data);
-    //home_moniter(simStatus, sdStatus, &data);
+
+
+    displayRelust();
+
 };
 
 void maincontroller()
@@ -31,6 +45,7 @@ void maincontroller()
     MODE status = WAITE_MODE;
     if (checkMode == RUN)
     {
+
         status = dataCounter();
     }
     if (status == WAITE_MODE)
@@ -39,11 +54,11 @@ void maincontroller()
 
     if (status == FINISH)
     {
-    	char forder[10] = {0};
-    	char file[10] = {0};
-    	char timeSend[50] = {0};
-    	char bufferData[500] = {0};
-        
+        char forder[10] = {0};
+        char file[10] = {0};
+        char timeSend[50] = {0};
+        char bufferData[500] = {0};
+
         SIM checkSimStatus = SIM_STATUS_ERROR;
 
         checkMode = STOP;
@@ -56,17 +71,26 @@ void maincontroller()
 
         sprintf(timeSend, "DATE %s-TIME %s", forder, file);
 
-        sprintf(bufferData , "id,%s\n execution time,%s\n count,%lu\n time relust,%lu:%lu:%lu\n Distance high,%.2f\n Distance,%.2f\n flow water,%.2f\n percent,%.2f\n", device.id, timeSend, data.count, data.hour, data.minute, data.second, data.Distance_high, data.Distance, data.Flow_warter, data.percent);
+        sprintf(bufferData,
+                "id,%s\n execution time,%s\n count,%lu\n time relust,%lu:%lu:%lu\n Distance high,%.2f\n Distance,%.2f\n flow water,%.2f\n percent,%.2f\n",
+                device.id, timeSend, data.count, data.hour, data.minute,
+                data.second, data.Distance_high, data.Distance,
+                data.Flow_warter, data.percent);
 
         SD_CARD_STATUS checkSdStatus = SD_CreatFile(forder, file, bufferData);
 
-        sprintf(bufferData , "{\"id\":\"%s\",\"execution time\":\"%s\",\"count\":\"%lu\",\"time relust\":\"%lu:%lu:%lu\",\"Distance high\":\"%.2f\",\"Distance\":\"%.2f\",\"flow water\":\"%.2f\",\"percent\":\"%.2f\"}", device.id, timeSend, data.count, data.hour, data.minute, data.second, data.Distance_high, data.Distance, data.Flow_warter, data.percent);
+        sprintf(bufferData,
+                "{\"id\":\"%s\",\"execution time\":\"%s\",\"count\":\"%lu\",\"time relust\":\"%lu:%lu:%lu\",\"Distance high\":\"%.2f\",\"Distance\":\"%.2f\",\"flow water\":\"%.2f\",\"percent\":\"%.2f\"}",
+                device.id, timeSend, data.count, data.hour, data.minute,
+                data.second, data.Distance_high, data.Distance,
+                data.Flow_warter, data.percent);
 
         if (checkSdStatus == SD_CARD_OK)
         {
             checkSimStatus = sendDataFirebase(bufferData);
         }
-        //finish_moniter(&data, checkSimStatus, checkSdStatus);
+        // finish_moniter(&data, checkSimStatus, checkSdStatus);
+        displayRelust();
     }
 
     if (ButtionOn == 1)
@@ -78,7 +102,8 @@ void maincontroller()
         simStatus = simInit();
         sdStatus = SD_Init();
         dataInit();
-        //home_moniter(simStatus, sdStatus, &data);
+        // home_moniter(simStatus, sdStatus, &data);
+        displayRelust();
     }
 
     if (ButtionOn == 2)
@@ -90,7 +115,6 @@ void maincontroller()
     {
         ButtionOn = 0;
         data.Distance_high = data.Distance_high + 0.5;
-
     }
     if (ButtionOn == 4 && flagButtion == 1)
     {

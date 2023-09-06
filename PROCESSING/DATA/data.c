@@ -13,7 +13,7 @@
  */
 
 #include "data.h"
-
+#include "../../PROCESSING/DISPLAY/display.h"
 
 extern DATA data;
 
@@ -27,7 +27,8 @@ RTC_DateTypeDef HDate = {0};
  *
  * @param data a pointer to a struct of type DATA.
  */
-void initCounter(){
+void initCounter()
+{
 	data.Distance_high = 10.00;
 	data.Distance = 0.2;
 }
@@ -37,6 +38,8 @@ void dataInit()
 	data.hour = 0;
 	data.minute = 0;
 	data.second = 0;
+	data.Flow_warter = 0;
+	data.percent = 0;
 };
 
 /**
@@ -100,13 +103,26 @@ DATA_STATUS dataGetTime(DATA *data)
 				data->minute = HTime.Minutes;
 				data->second = HTime.Seconds;
 				timCutCount = HAL_GetTick();
-				//count_moniter(data);
+				// count_moniter(data);
+				displayCount();
 			}
 		}
+		uint8_t stoptime = 0;
+
+
 		data->evenMode = STOP_COUNT;
 		data->time_count_second = data->hour * 3600 + data->minute * 60 + data->second;
 		data->real_time = HTime.Hours * 3600 + HTime.Minutes * 60 + HTime.Seconds;
-		if ((data->real_time - data->time_count_second > 40))
+		// if (data->count == 0 || data->count == 1 || data->count == 2)
+		// {
+		// 	stoptime = 20000;
+		// }
+		// else
+		// {
+		// 	stoptime = (uint8_t)(data->time_count_second / data->count);
+		// }
+		
+		if ((data->real_time - data->time_count_second > 30))
 		{
 			data->countTime = STOP_TIME;
 			status = DATA_STOP;
@@ -123,7 +139,12 @@ DATA_STATUS dataGetTime(DATA *data)
  */
 void handleData()
 {
-	data.Flow_warter = data.Distance_high / ((data.hour * 60.0) + (data.minute * 1.0) + (data.second / 60.0))	;
+	data.second = data.second + (uint8_t)(((data.hour * 3600.0) + (data.minute * 60.0) + (data.second / 1.0))/data.count);
+	if(data.second >= 60){
+		data.minute++;
+		data.second = data.second - 60;
+	}
+	data.Flow_warter = data.Distance_high / ((data.hour * 60.0) + (data.minute * 1.0) + (data.second / 60.0));
 	data.percent = ((data.Distance * data.count) / data.Distance_high) * 100;
 	// if (data->percent > 100)
 	// {

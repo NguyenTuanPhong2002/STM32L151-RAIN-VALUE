@@ -1,4 +1,0 @@
-PRETREATMENT/DISPLAY/Fonts/font12.o: \
- ../PRETREATMENT/DISPLAY/Fonts/font12.c \
- ../PRETREATMENT/DISPLAY/Fonts/fonts.h
-../PRETREATMENT/DISPLAY/Fonts/fonts.h:

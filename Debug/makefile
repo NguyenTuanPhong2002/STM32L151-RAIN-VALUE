@@ -11,7 +11,11 @@ RM := rm -rf
 -include sources.mk
 -include PROCESSING/SIM/subdir.mk
 -include PROCESSING/SD/subdir.mk
+-include PROCESSING/DISPLAY/subdir.mk
 -include PROCESSING/DATA/subdir.mk
+-include PRETREATMENT/epaper/GUI/subdir.mk
+-include PRETREATMENT/epaper/Fonts/subdir.mk
+-include PRETREATMENT/epaper/subdir.mk
 -include PRETREATMENT/SIM7600/subdir.mk
 -include PRETREATMENT/SD_CARD/subdir.mk
 -include PRETREATMENT/HELTEC/subdir.mk

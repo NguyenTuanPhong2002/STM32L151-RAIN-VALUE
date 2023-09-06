@@ -8,12 +8,12 @@ extern DEVICE device;
 SIM startSIM()
 {
     HAL_GPIO_WritePin(FLIGHTMODE, SET);
-    // HAL_GPIO_WritePin(RESETSIM, SET);
-    // HAL_Delay(1500);
-    // HAL_GPIO_WritePin(RESETSIM, RESET);
-    // HAL_Delay(1500);
+    HAL_GPIO_WritePin(RESETSIM, SET);
+    HAL_Delay(1500);
+    HAL_GPIO_WritePin(RESETSIM, RESET);
+    HAL_Delay(1500);
     HAL_GPIO_WritePin(PWRKEY, SET);
-    // HAL_Delay(15000);
+    HAL_Delay(15000);
 };
 
 SIM simInit()

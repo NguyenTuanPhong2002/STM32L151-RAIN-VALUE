@@ -23,6 +23,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "../../CONTROLLER/inc/maincontroller.h"
+
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -77,53 +78,47 @@ static void MX_TIM4_Init(void);
 uint8_t gettick;
 uint8_t time;
 uint8_t ButtionOn = 0;
-void HAL_GPIO_EXTI_Callback(uint16_t GPIO_PIN)
-{
-  gettick = HAL_GetTick();
-  // if (gettick - time > 20)
-  {
-    switch (GPIO_PIN)
-    {
-    case BUTTION7:
-      ButtionOn = 1;
-      break;
-    case BUTTION6:
-      ButtionOn = 2;
-      break;
-    case BUTTION5:
-      ButtionOn = 3;
-      break;
-    case BUTTION4:
-      ButtionOn = 4;
-      break;
-    case BUTTION3:
-      ButtionOn = 5;
-      break;
-    case BUTTION2:
-      ButtionOn = 6;
-      break;
-    case BUTTION1:
-      ButtionOn = 7;
-      break;
-    }
-    time = HAL_GetTick();
-  }
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_PIN) {
+	gettick = HAL_GetTick();
+	// if (gettick - time > 20)
+	{
+		switch (GPIO_PIN) {
+		case BUTTION7:
+			ButtionOn = 1;
+			break;
+		case BUTTION6:
+			ButtionOn = 2;
+			break;
+		case BUTTION5:
+			ButtionOn = 3;
+			break;
+		case BUTTION4:
+			ButtionOn = 4;
+			break;
+		case BUTTION3:
+			ButtionOn = 5;
+			break;
+		case BUTTION2:
+			ButtionOn = 6;
+			break;
+		case BUTTION1:
+			ButtionOn = 7;
+			break;
+		}
+		time = HAL_GetTick();
+	}
 }
-void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim)
-{
-  if (htim->Channel == HAL_TIM_ACTIVE_CHANNEL_1)
-  {
-    data.countTime = evenMode(&data, RUN_TIME);
-    data.evenMode = countTime(&data, RUN_COUNT);
-  }
+void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim) {
+	if (htim->Channel == HAL_TIM_ACTIVE_CHANNEL_1) {
+		data.countTime = evenMode(&data, RUN_TIME);
+		data.evenMode = countTime(&data, RUN_COUNT);
+	}
 }
 
-void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size)
-{
-  sim.rxFlag = SIMTRUE;
-  SIM_StatusTypeDef status = SIM_BUSY;
-  HAL_UARTEx_ReceiveToIdle_DMA(sim.UART, (uint8_t *)sim.rxBuffer,
-                               SIM_BUFFER_SIZE);
+void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size) {
+	sim.rxFlag = SIMTRUE;
+	SIM_StatusTypeDef status = SIM_BUSY;
+	HAL_UARTEx_ReceiveToIdle_DMA(sim.UART, (uint8_t*) sim.rxBuffer,	SIM_BUFFER_SIZE);
 }
 /* USER CODE END 0 */
 
@@ -140,7 +135,7 @@ int main(void)
   /* MCU Configuration--------------------------------------------------------*/
 
   /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
-  HAL_Init();
+   HAL_Init();
 
   /* USER CODE BEGIN Init */
 
@@ -163,23 +158,36 @@ int main(void)
   MX_TIM4_Init();
   MX_FATFS_Init();
   /* USER CODE BEGIN 2 */
-  start();
 
-  HAL_TIM_OC_Start_IT(&htim4, TIM_CHANNEL_1);
+//	EPD_init_Full();
+//
+//	EPD_Dis_Full((unsigned char *)gImage_logo, 1); //	pic
+//
+//
+//	EPAPER_Init_Part();
+//
+//	//EPAPER_ClearPart();
+//	for (int i = 0; i < 30; ++i) {
+//		EPD_Dis_Part(10, 20, 20, 35, (unsigned char*) &letter[i], 1);
+//		HAL_Delay(3000);
+//	}
+
+	start();
+
+	HAL_TIM_OC_Start_IT(&htim4, TIM_CHANNEL_1);
 
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
 
-  while (1)
-  {
+	while (1) {
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
 
-    maincontroller();
-  }
+		maincontroller();
+	}
   /* USER CODE END 3 */
 }
 
@@ -570,11 +578,10 @@ static void MX_GPIO_Init(void)
 void Error_Handler(void)
 {
   /* USER CODE BEGIN Error_Handler_Debug */
-  /* User can add his own implementation to report the HAL error return state */
-  __disable_irq();
-  while (1)
-  {
-  }
+	/* User can add his own implementation to report the HAL error return state */
+	__disable_irq();
+	while (1) {
+	}
   /* USER CODE END Error_Handler_Debug */
 }
 

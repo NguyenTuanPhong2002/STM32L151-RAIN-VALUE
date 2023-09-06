@@ -43,7 +43,8 @@ CONTROLLER/src/maincontroller.o: ../CONTROLLER/src/maincontroller.c \
  ../Middlewares/Third_Party/FatFs/src/diskio.h \
  ../Middlewares/Third_Party/FatFs/src/ff.h ../FATFS/Target/user_diskio.h \
  g:\stm32l151\ rain\ value\pretreatment\sd_card\sd_card.h \
- g:\stm32l151\ rain\ value\pretreatment\sd_card\fatfs_sd.h
+ g:\stm32l151\ rain\ value\pretreatment\sd_card\fatfs_sd.h \
+ ../CONTROLLER/src/../../PROCESSING/DISPLAY/display.h
 ../CONTROLLER/src/../inc/maincontroller.h:
 ../Core/Inc/main.h:
 ../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal.h:
@@ -93,3 +94,4 @@ g:\stm32l151\ rain\ value\processing\sd\sd.h:
 ../FATFS/Target/user_diskio.h:
 g:\stm32l151\ rain\ value\pretreatment\sd_card\sd_card.h:
 g:\stm32l151\ rain\ value\pretreatment\sd_card\fatfs_sd.h:
+../CONTROLLER/src/../../PROCESSING/DISPLAY/display.h:

@@ -116,7 +116,11 @@ void EPD_W21_DispInit(void)
     //
     //	EPD_W21_Write(RamDataEntryMode, sizeof(RamDataEntryMode));	// X increase, Y decrease
 
-    EPD_W21_Write(GDOControl, sizeof(GDOControl)); // Pannel configuration, Gate selection
+    EPD_W21_Write(GDOControl, sizeof(GDOControl)); // Pannel configuration, Gate selection'EPD_W21_Write(RamDataEntryMode, sizeof(RamDataEntryMode)); // X increase, Y decrease
+
+
+    EPD_W21_Write(RamDataEntryMode, sizeof(RamDataEntryMode)); // X increase, Y decrease
+
 
     EPD_W21_Write(softstart, sizeof(softstart)); // X decrease, Y decrease
 
@@ -131,7 +135,7 @@ void EPD_W21_DispInit(void)
 
     EPD_W21_Write(Gatetime, sizeof(Gatetime)); // Gage time setting
 
-    EPD_W21_Write(RamDataEntryMode, sizeof(RamDataEntryMode)); // X increase, Y decrease
+    // EPD_W21_Write(RamDataEntryMode, sizeof(RamDataEntryMode)); // X increase, Y decrease
 
     EPD_W21_SetRamArea(0x00, (xDot - 1) / 8, (yDot - 1) % 256, (yDot - 1) / 256, 0x00, 0x00); // X-source area,Y-gage area
     EPD_W21_SetRamPointer(0x00, (yDot - 1) % 256, (yDot - 1) / 256);                          // set ram
@@ -313,10 +317,10 @@ void EPD_Dis_Part(unsigned char xStart, unsigned char xEnd, unsigned long yStart
     {
         part_display(xStart / 8, xEnd / 8, yEnd % 256, yEnd / 256, yStart % 256, yStart / 256); // set ram
         EPD_W21_WriteDispRam(xEnd - xStart, yEnd - yStart + 1, DisBuffer);
-        EPD_W21_Update_Part();
-        HAL_Delay(300);
-        part_display(xStart / 8, xEnd / 8, yEnd % 256, yEnd / 256, yStart % 256, yStart / 256);
-        EPD_W21_WriteDispRam(xEnd - xStart, yEnd - yStart + 1, DisBuffer);
+        // EPD_W21_Update();
+        // HAL_Delay(300);
+        // part_display(xStart / 8, xEnd / 8, yEnd % 256, yEnd / 256, yStart % 256, yStart / 256);
+        // EPD_W21_WriteDispRam(xEnd - xStart, yEnd - yStart + 1, DisBuffer);
         // HAL_Delay(300);
     }
     else
